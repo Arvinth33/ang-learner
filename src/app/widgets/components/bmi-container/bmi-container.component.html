@@ -1,0 +1,6 @@
+<p>bmi-container works!</p>
+
+<div>
+    <app-bmi-calculator (resultCalculated) = "onBmiResultCalculated($event)"></app-bmi-calculator>
+    <app-bmi-calculator-history [bmiResultData]="bmiData"></app-bmi-calculator-history>
+</div>

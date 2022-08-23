@@ -1,0 +1,24 @@
+<p>bmi-calculator-history works!</p>
+
+<div>
+    <table>
+        <tr>
+            <th>
+                Item
+            </th>
+            <th>
+                Height
+            </th>
+            <th>
+                weight
+            </th>
+            <th>Result</th>
+        </tr>
+        <tbody>
+            <tr *ngFor="let item of bmiResultHistory; index as i">
+                <td>{{i}}</td>
+                <td>{{item.height}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

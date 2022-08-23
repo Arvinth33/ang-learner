@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,EventEmitter,Output } from '@angular/core';
+import { bmiItemModel } from '../../models/bmiItem.model';
 
 @Component({
   selector: 'app-bmi-calculator',
@@ -14,6 +15,9 @@ export class BmiCalculatorComponent implements OnInit {
   constructor() {
    
   }
+
+  @Output()
+  resultCalculated=new EventEmitter<bmiItemModel>();
 
   ngOnInit(): void {
     
@@ -32,6 +36,7 @@ export class BmiCalculatorComponent implements OnInit {
      }else{
       this.bmiResult="obese";
      }
+     this.resultCalculated.emit(new bmiItemModel(this.height,this.weight,this.bmi));
   }
 
   clear():any{

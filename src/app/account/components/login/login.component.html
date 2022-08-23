@@ -1,0 +1,23 @@
+<h1>          LOGIN      </h1>
+<!-- <p>
+<label for="username">UserName:</label><br>
+<input type="string" id="username" name="username" [(ngModel)]="username" placeholder="enter username">
+</p>
+<p>
+<label for="password">Password:</label><br>
+<input type="password" id="password" name="password" [(ngModel)]="password" placeholder="enter password">
+</p>
+<button (click)="login()">Login</button>&nbsp;&nbsp;<button>Sign Up</button><br>
+{{result}} -->
+
+<form #loginForm="ngForm" (ngSubmit)="login(loginForm.form)">
+    <p> UserName: <input name="userNameEditControl" type="text" [(ngModel)]="username" #userNameFormControl="ngModel" required/></p>
+    <div *ngIf="userNameFormControl.errors">
+        <output *ngIf="userNameFormControl.errors['required']">Username is required</output>
+    </div>
+    <p> Password: <input name="passwordEditControl" type="password" [(ngModel)]="password" #passwordFormControl="ngModel" required size="8"/></p>
+    <div *ngIf="passwordFormControl.errors">
+        <output *ngIf="passwordFormControl.errors['required']">Password is required</output>
+    </div>
+    <input type="submit" value="Login">
+</form>
