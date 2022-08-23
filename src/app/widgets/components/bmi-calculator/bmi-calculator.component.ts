@@ -10,7 +10,7 @@ export class BmiCalculatorComponent implements OnInit {
   weight:number=0;
   height:number=0;
   bmi:number=0;
-  bmiResult:String='';
+  bmiResult:String='underweight';
   constructor() {
    
   }
