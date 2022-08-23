@@ -20,8 +20,6 @@ export class BmiCalculatorComponent implements OnInit {
   }
 
   calculateBmi(): any {
-     console.log(this.height);
-     console.log(this.weight);
      const hgt=this.height;
      const wgt=this.weight;
      this.bmi= wgt/(hgt*hgt);
@@ -34,7 +32,13 @@ export class BmiCalculatorComponent implements OnInit {
      }else{
       this.bmiResult="obese";
      }
+  }
 
+  clear():any{
+    this.height=0;
+    this.weight=0;
+    this.bmi=0;
+    this.bmiResult='underweight';
   }
 
 }
