@@ -1,11 +1,11 @@
 <h1>BMI Calculator</h1>
 <p>
 <label for="height">Height:</label><br>
-<input type="number" id="height" name="height" [(ngModel)]="height" placeholder="enter height in meter"> <a>Enter height in meter</a><br>
+<input type="number" id="height" name="height" [(ngModel)]="height" placeholder="enter height in meter"> <a> Enter height in meter</a><br>
 </p>
 <p>
 <label for="weight">Weight:</label><br>
-<input type="number" id="weight" name="weight" [(ngModel)]="weight" placeholder="enter weight in kg"><a>Enter weight in kg</a><br>
+<input type="number" id="weight" name="weight" [(ngModel)]="weight" placeholder="enter weight in kg"><a> Enter weight in kg</a><br>
 </p>
 <button (click)="calculateBmi()">CalculateBMI</button>&nbsp;&nbsp;<button (click)="clear()">Clear</button><br>
 <p>Your BMI is {{bmi}} and you are {{bmiResult}}</p>
